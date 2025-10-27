@@ -1,5 +1,6 @@
 // src/app/components/Navbar.tsx
 import Link from 'next/link';
+import MobileMenu from './MobileMenu';
 
 export default function Navbar() {
     return (
@@ -12,11 +13,7 @@ export default function Navbar() {
                 </Link>
 
                 {/* --- Mobile Menu Button (for small screens) --- */}
-                <div className="md:hidden">
-                    <button className="text-gray-700 p-2 rounded-md hover:bg-gray-100">
-                        Menu
-                    </button>
-                </div>
+                <MobileMenu />
 
                 {/* --- Desktop Menu (for medium screens and up) --- */}
                 <div className="hidden md:flex items-center space-x-6">
