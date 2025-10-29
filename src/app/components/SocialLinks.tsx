@@ -30,6 +30,7 @@ export default function SocialLinks() {
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={link.label}
+                        title={link.label}
                     >
                         <IconComponent className={combinedClasses} />
                     </Link>

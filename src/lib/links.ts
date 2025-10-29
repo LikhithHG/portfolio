@@ -16,7 +16,7 @@ export const socialLinks: SocialLink[] = [
         id: "github",
         url: "https://github.com/LikhithHG",
         label: "GitHub",
-        color: "text-white",
+        color: "text-black dark:text-white md:text-white",
     },
     {
         id: "leetcode",

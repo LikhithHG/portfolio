@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import SocialLinks from '../components/SocialLinks';
+import AnimatedGreeting from '../components/AnimatedGreetings';
 
 export default function Hero() {
+    const greetingText = "Hello";
     return (
         // This section is now full-screen on desktop (md:h-screen)
         // and auto-height on mobile
@@ -17,19 +19,39 @@ export default function Hero() {
                 priority // Helps load this large image faster
             />
 
+            {/* Gradient Overlay (Desktop Only) <-- ADD THIS DIV */}
+            {/* single div will create the semi-transparent black gradient overlay on desktop screens, fading from left to right, placed just behind your text content but above the background image. */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent -z-10 hidden md:block"></div>
+
             {/* 2. This is the Content Wrapper */}
             {/* We use 'justify-center' to vertically center the text on desktop */}
             <div className="container mx-auto flex flex-col-reverse md:flex-col justify-center px-8 py-16 md:py-0">
             
                 {/* --- Text Content --- */}
                 {/* On desktop, we limit the width to 60% to match your example */}
-                <div className="w-full md:w-3/5 text-center md:text-left">
+                <div className="w-full md:w-2/3 text-center md:text-left">
+
+                    {/* Greeting */}
+                    <AnimatedGreeting />
+                    {/* <div className="mb-2 h-8"> {/* Maintain height for spacing */}
+                        {/* Apply script font and greeting color */}
+                        {/* <div className="flex items-center justify-center md:justify-start gap-2 text-xl md:text-2xl font-script text-[var(--color-greeting)]">
+                            {/* <GreetingIcon /> */}
+                            {/* <span>{greetingText}</span>
+                        </div>
+                    </div> */}
             
-                    {/* Text colors now change for desktop */}
-                    <h1 className="text-4xl md:text-6xl font-bold text-gray-900 md:text-white">
-                        Hi, I'm Likhith 
+                    {/* Name */}
+                    {/* Apply Serif font and foreground color */}
+                    <h1 className="text-3xl md:text-5xl font-semibold font-serif text-[var(--foreground)]">
+                        {/* Apply Sans font to "I'm" */}
+                        <span className="text-xl md:text-3xl text-gray-600 dark:text-[var(--foreground)] md:text-gray-200">I'm </span>
+                        {/* Apply script font and highlight color to first name */}
+                        <span className=" bg-gradient-to-br bg-clip-text text-transparent from-[#FFD700] to-[#20B2AA] md:tracking-wider">Likhith Murthy</span> 
                     </h1>
-                    <p className="text-lg md:text-xl mt-4 text-gray-700 md:text-gray-200">
+                    {/* Subtitle */}
+                    {/* Apply Serif font and muted foreground color */}
+                    <p className="text-lg md:text-2xl mt-4 font-serif md:font-semibold text-[var(--foreground-muted)] md:text-gray-300 opacity-90 md:opacity-95">
                         Software Developer driven by curiosity, innovation, and problem-solving
                     </p>
             
@@ -38,13 +60,13 @@ export default function Hero() {
 
                 {/* --- Profile Picture (Mobile Only) --- */}
                 {/* 3. This div is now HIDDEN on desktop (md:hidden) */}
-                <div className="w-full md:hidden mt-12 flex justify-center">
+                <div className="w-full md:hidden mb-12 flex justify-center">
                     <Image
                         src="/images/profile.jpg" // Your circular profile pic
                         alt="A photo of Likhith"
                         width={256} // 256px
                         height={256} // 256px
-                        className="rounded-full w-64 h-64 object-cover border-4 border-gray-200 shadow-lg"
+                        className="rounded-full w-64 h-64 object-cover border-4 border-white dark:border-[var(--border)] shadow-lg"
                     />
                 </div>
             </div>

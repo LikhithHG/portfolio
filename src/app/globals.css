@@ -7,23 +7,50 @@
 :root {
   --background: #fcfcfc;
   --foreground: #040404;
+  --foreground-muted: #525252;
   --primary: #2563eb;
   --selected-background: #e2e2e2;
   --border: #d0d0d0;
+  /* Custom Colors */
+  --color-name-logo: #DAA520; /* Gold/Yellowish */
+  --color-greeting: #20B2AA; /* LightSeaGreen/Cyan */
+  --color-highlight: #32CD32; /* LimeGreen */
 }
 
 /* Dark Mode Variables */
 :root.dark {
-  --background: #23283e;
-  --foreground: #cdcdff;
-  --primary: #818cf8;
+  --background: #1a1a1a; /* Darker background if needed */
+  --foreground: #e5e5e5; /* Off-white text */
+  --foreground-muted: #a3a3a3; /* Lighter gray for subtitles */
+  --primary: #818cf8; /* Lighter Blue/Lavender */
+  --border: #414869;
   --selected-background: #3b4263;
-  --border: #414869; /* Use --border here too */
+  /* Custom Colors */
+  --color-name-logo: #DAA520; /* Gold/Yellowish */
+  --color-greeting: #20B2AA; /* LightSeaGreen/Cyan */
+  --color-highlight: #32CD32; /* LimeGreen */
 }
 
 /* Apply the variables to the body */
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif; /* Keep your font */
+  font-family: var(--font-inter);/* Keep your font */
+}
+
+/* Add utility class for the script font*/
+.font-script {
+  font-family: var(--font-pacifico);
+}
+
+.font-serif { 
+  font-family: var(--font-noto-serif);
+}
+
+.font-sans { 
+  font-family: var(--font-inter);
+}
+
+.font-dancing {
+  font-family: var(--font-dancing-script);
 }

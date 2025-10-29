@@ -9,7 +9,7 @@ export default function Navbar() {
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         
                 {/* Logo/Home Link */}
-                <Link href="/" className="text-2xl font-bold text-[var(--foreground)]">
+                <Link href="/" className="text-2xl font-semibold font-dancing text-[var(--color-name-logo)] tracking-widest hover:cursor-pointer">
                     Likhith HG
                 </Link>
 
