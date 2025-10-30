@@ -23,14 +23,21 @@ export const ThemeSwitcher = () => {
     const isDarkMode = theme === 'dark';
     const toggleTheme = () => setTheme(isDarkMode ? 'light' : 'dark');
 
+    const buttonBgClass = isDarkMode
+        ? 'bg-white' // White background when dark mode is active (sun icon shown)
+        : 'bg-[var(--selected-background)]';
+
+    const tooltipText = isDarkMode ? "Switch to light mode" : "Switch to dark mode";
+
     return (
         <button
             onClick={toggleTheme}
             // Use CSS variables for styling consistency
-            className="p-2 rounded-md bg-[var(--selected-background)] text-[var(--foreground)] hover:opacity-80 transition-opacity"
-            aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            className="p-2 rounded-md ${buttonBgClass} hover:opacity-80 transition-opacity"
+            aria-label={tooltipText}
+            title={tooltipText}
         >
-            {isDarkMode ? <FiSun className="h-5 w-5" /> : <FiMoon className="h-5 w-5" />}
+            {isDarkMode ? <FiSun className="h-5 w-5 text-yellow-400" /> : <FiMoon className="h-5 w-5 text-slate-700" />}
         </button>
     );
 };

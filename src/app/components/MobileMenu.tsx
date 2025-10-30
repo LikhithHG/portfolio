@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { FiUser, FiBriefcase, FiCode, FiImage, FiMail } from 'react-icons/fi';
 
 export default function MobileMenu() {
     // State to track if the mobile menu is open
@@ -13,7 +14,9 @@ export default function MobileMenu() {
             <div className="md:hidden">
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggles state
-                    className="text-gray-700 p-2 rounded-md hover:bg-gray-100"
+                    className="text-[var(--foreground)] p-2 rounded-md bg-[var(--selected-background)]" // <-- MODIFIED text color
+                    aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                    aria-expanded={isMenuOpen}
                 >
                     {isMenuOpen ? (
                         // "Chevron Up" (Close)
@@ -31,42 +34,52 @@ export default function MobileMenu() {
 
             {/* --- Mobile Menu Dropdown --- */}
             {isMenuOpen && (
-                <div className="md:hidden w-64 bg-white shadow-lg absolute top-16 right-4 rounded-lg border border-gray-200">
-                    <div className="flex flex-col items-center p-2">
+                <div className="md:hidden w-64 bg-[var(--background)] shadow-lg absolute top-16 right-4 rounded-lg border border-[var(--border)]">
+                    <div className="flex flex-col items-center p-2 space-y-1 text-[var(--foreground)]">
                         <Link
                             href="/#about"
-                            className="py-2 text-gray-600 hover:text-blue-600"
+                            className="py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            About
+                            <span className="flex items-center gap-3">
+                                <FiUser className="h-5 w-5" /> About
+                            </span>
                         </Link>
                         <Link
                             href="/#experience"
-                            className="py-2 text-gray-600 hover:text-blue-600"
+                            className="py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Experience
+                            <span className="flex items-center gap-3">
+                                <FiBriefcase className="h-5 w-5" /> Experience
+                            </span>
                         </Link>
                         <Link
                             href="/#projects"
-                            className="py-2 text-gray-600 hover:text-blue-600"
+                            className="py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Projects
+                            <span className="flex items-center gap-3">
+                                <FiCode className="h-5 w-5" /> Projects
+                            </span>
                         </Link>
                         <Link
                             href="/gallery"
-                            className="py-2 text-gray-600 hover:text-blue-600"
+                            className="py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Gallery
+                            <span className="flex items-center gap-3">
+                                <FiImage className="h-5 w-5" /> Gallery
+                            </span>
                         </Link>
                         <Link
                             href="/#contact"
-                            className="mt-2 w-full text-center bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+                            className="mt-2 w-full text-center bg-[var(--primary)] text-white px-4 py-2 rounded-md hover:opacity-90"
                             onClick={() => setIsMenuOpen(false)}
                         >
-                            Contact
+                            <span className="flex items-center justify-center gap-2">
+                                <FiMail className="h-5 w-5" /> Contact
+                            </span>
                         </Link>
                     </div>
                 </div>
