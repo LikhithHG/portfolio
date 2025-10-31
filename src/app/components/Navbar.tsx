@@ -9,7 +9,7 @@ export default function Navbar() {
         <nav 
             className="sticky top-0 z-50 w-full transition-colors duration-300 ease-in-out
                         bg-[var(--background)] shadow-md border-b border-[var(--border)]
-                        md:absolute md:bg-[var(--background)]/5 md:backdrop-blur-sm md:shadow-none md:border-none"
+                        md:fixed md:bg-[var(--background)]/5 md:backdrop-blur-sm md:shadow-none md:border-none"
         >
             <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         
