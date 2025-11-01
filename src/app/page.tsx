@@ -1,5 +1,5 @@
-import About from './sections/About';
-import Hero from './sections/Hero'; // 1. Import your new section
+import About from './sections/about/About';
+import Hero from './sections/hero/Hero'; // 1. Import your new section
 
 export default function Home() {
   return (

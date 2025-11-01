@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import SocialLinks from '../components/SocialLinks';
-import AnimatedGreeting from '../components/AnimatedGreetings';
+import SocialLinks from '../../components/SocialLinks';
+import AnimatedGreeting from './AnimatedGreetings';
 
 export default function Hero() {
     const greetingText = "Hello";

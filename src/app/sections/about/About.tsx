@@ -1,6 +1,6 @@
 // src/app/sections/About.tsx
-import AboutContentTabs from "@/app/components/AboutContentTabs"; // Import Client Component
-import SkillsGrid from "@/app/components/SkillsGrid";         // Import Server Component
+import AboutContentTabs from "@/app/sections/about/AboutContentTabs"; // Import Client Component
+import SkillsGrid from "./SkillsGrid";         // Import Server Component
 
 export default function About() {
     return (
