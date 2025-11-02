@@ -16,7 +16,7 @@ export default function SkillsGrid() {
                     return (
                         <div
                             key={skill.name}
-                            title={`Proficiency: ${skill.proficiency}`}
+                            // title={`Proficiency: ${skill.proficiency}`}
                             // 2. 'group' class allows 'group-hover:' styles in the SVG to work
                             className="flex flex-col items-center justify-center p-3 rounded-md transition-all duration-200 group hover:scale-110"
                         >
@@ -25,9 +25,21 @@ export default function SkillsGrid() {
                             {/* We pass a className for sizing and default color */}
                             <SkillIcon className="h-10 w-10 mb-2 text-[var(--foreground)]" />
 
-                            <span className="text-xs text-center text-[var(--foreground-muted)] font-sans mt-2 group-hover:text-[var(--primary)]">
-                                {skill.name}
-                            </span>
+                            {/* --- Text Container --- */}
+                            <div className="flex flex-col items-center text-center mt-2">
+                                {/* Skill Name (Always visible, changes color on hover) */}
+                                <span 
+                                    className="text-xs text-[var(--foreground-muted)] font-sans transition-colors duration-200 group-hover:text-[var(--primary)]">
+                                    {skill.name}
+                                </span>
+
+                                {/* Proficiency (Hidden by default, fades in and gains height on hover) */}
+                                <span 
+                                    className="block text-xs text-[#b3eb91] h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:h-4 group-hover:opacity-100"
+                                >
+                                    {skill.proficiency}
+                                </span>
+                            </div>
                         </div>
                     );
                 })}
