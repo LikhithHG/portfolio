@@ -9,19 +9,18 @@ import JavaIcon from '@/app/components/icons/JavaIcon';
 import TypeScriptIcon from '@/app/components/icons/TypeScriptIcon';
 import HtmlIcon from '@/app/components/icons/HtmlIcon';
 import CssIcon from '@/app/components/icons/CssIcon';
-// import TailwindIcon from '@/app/components/icons/TailwindIcon';
+import TailwindIcon from '@/app/components/icons/TailwindIcon';
 import ReduxIcon from '@/app/components/icons/ReduxIcon';
-// import ReactNativeIcon from '@/app/components/icons/ReactNativeIcon';
 import NextJsIcon from '@/app/components/icons/NextJsIcon';
-// import MySqlIcon from '@/app/components/icons/MySqlIcon';
 import MongoDbIcon from '@/app/components/icons/MongoDbIcon';
 import GitIcon from '@/app/components/icons/GitIcon';
-// import OopsIcon from '@/app/components/icons/OopsIcon';
-// import NetworkIcon from '@/app/components/icons/NetworkIcon';
-// import SecurityIcon from '@/app/components/icons/SecurityIcon';
+import MySqlIcon from '@/app/components/icons/MySqlIcon';
 import AwsIcon from '@/app/components/icons/AwsIcon';
-// import SdlcIcon from '@/app/components/icons/SdlcIcon';
-// (Create these files in 'src/app/components/icons/')
+import DockerIcon from '@/app/components/icons/DockerIcon';
+import OciIcon from '@/app/components/icons/OciIcon';
+import KubernetesIcon from '@/app/components/icons/KubernetesIcon';
+import CyberSecurityIcon from '@/app/components/icons/CyberSecurityIcon';
+import ComputerNetworkIcon from '@/app/components/icons/ComputerNetworkIcon';
 
 // --- 2. Update the Skill type ---
 export type Skill = {
@@ -33,28 +32,24 @@ export type Skill = {
 
 // --- 3. Update the skills data array to use the components ---
 export const skillsData: Skill[] = [
-  // Row 1
-  { name: 'JavaScript', icon: JavaScriptIcon, proficiency: 'Advanced' },
-  { name: 'React.js', icon: ReactIcon, proficiency: 'Advanced' },
-  { name: 'Node.js', icon: NodeJsIcon, proficiency: 'Intermediate' },
-  { name: 'Python', icon: PythonIcon, proficiency: 'Intermediate' },
-  { name: 'Java', icon: JavaIcon, proficiency: 'Intermediate' },
-//   // Row 2
-  { name: 'TypeScript', icon: TypeScriptIcon, proficiency: 'Advanced' },
   { name: 'HTML', icon: HtmlIcon, proficiency: 'Expert' },
   { name: 'CSS', icon: CssIcon, proficiency: 'Expert' },
-//   { name: 'TailwindCSS', icon: TailwindIcon, proficiency: 'Advanced' },
-  { name: 'ReactRedux', icon: ReduxIcon, proficiency: 'Intermediate' },
-//   // Row 3
-//   { name: 'ReactNative', icon: ReactNativeIcon, proficiency: 'Beginner' },
+  { name: 'JavaScript', icon: JavaScriptIcon, proficiency: 'Advanced' },
+  { name: 'TypeScript', icon: TypeScriptIcon, proficiency: 'Advanced' },
+  { name: 'React.js', icon: ReactIcon, proficiency: 'Advanced' },
   { name: 'NextJS', icon: NextJsIcon, proficiency: 'Advanced' },
-//   { name: 'MySQL', icon: MySqlIcon, proficiency: 'Intermediate' },
+  { name: 'Node.js', icon: NodeJsIcon, proficiency: 'Intermediate' },
+  { name: 'TailwindCSS', icon: TailwindIcon, proficiency: 'Advanced' },
+  { name: 'Python', icon: PythonIcon, proficiency: 'Intermediate' },
+  { name: 'Java', icon: JavaIcon, proficiency: 'Intermediate' },
   { name: 'MongoDB', icon: MongoDbIcon, proficiency: 'Intermediate' },
+  { name: 'ReactRedux', icon: ReduxIcon, proficiency: 'Intermediate' },
   { name: 'Git', icon: GitIcon, proficiency: 'Advanced' },
-//   // Row 4
-//   { name: 'OOPs', icon: OopsIcon, proficiency: 'Advanced' },
-//   { name: 'Network', icon: NetworkIcon, proficiency: 'Intermediate' },
-//   { name: 'CyberSecurity', icon: SecurityIcon, proficiency: 'Beginner' },
+  { name: 'MySQL', icon: MySqlIcon, proficiency: 'Advanced' },
+  { name: 'OCI', icon: OciIcon, proficiency: 'Intermediate' },
   { name: 'AWS', icon: AwsIcon, proficiency: 'Intermediate' },
-//   { name: 'SDLC', icon: SdlcIcon, proficiency: 'Advanced' },
+  { name: 'Docker', icon: DockerIcon, proficiency: 'Beginmer' },
+  { name: 'Kubernetes', icon: KubernetesIcon, proficiency: 'Beginmer' },
+  { name: 'Computer Networks', icon: ComputerNetworkIcon, proficiency: 'Advanced' },
+  { name: 'Cyber Security', icon: CyberSecurityIcon, proficiency: 'Intermediate' },
 ];

@@ -1,35 +1,18 @@
 export default function JavaIcon({ className }: { className?: string }) {
   return (
-    <svg
-      viewBox='0 0 32 32'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
-      className={className}
+    <svg 
+      xmlns="http://www.w3.org/2000/svg"
+      aria-label="Java" role="img"
+      viewBox="0 0 512 512" fill="none"
     >
-      {/* Coffee Cup Body */}
-      <path
-        d='M24 10H8C6.89543 10 6 10.8954 6 12V24C6 25.1046 6.89543 26 8 26H24C25.1046 26 26 25.1046 26 24V12C26 10.8954 25.1046 10 24 10Z'
-        className='fill-current group-hover:fill-[#E76F00] group-focus:fill-[#E76F00]'
+      <rect
+          width="512" height="512"
+          rx="15%"
+          fill="none"
       />
-      {/* Coffee Cup Handle */}
-      <path
-        d='M26 15C26 13.8954 26.8954 13 28 13C29.1046 13 30 13.8954 30 15V21C30 22.1046 29.1046 23 28 23C26.8954 23 26 22.1046 26 21V15Z'
-        className='fill-current group-hover:fill-[#E76F00] group-focus:fill-[#E76F00]'
-      />
-      {/* Steam Wisp 1 */}
-      <path
-        d='M11 7C11 6.44772 11.4477 6 12 6H14C14.5523 6 15 6.44772 15 7V8C15 8.55228 14.5523 9 14 9H12C11.4477 9 11 8.55228 11 8V7Z'
-        className='fill-current group-hover:fill-[#C95B00] group-focus:fill-[#C95B00]'
-      />
-      {/* Steam Wisp 2 */}
-      <path
-        d='M17 5C17 4.44772 17.4477 4 18 4H20C20.5523 4 21 4.44772 21 5V6C21 6.55228 20.5523 7 20 7H18C17.4477 7 17 6.55228 17 6V5Z'
-        className='fill-current group-hover:fill-[#C95B00] group-focus:fill-[#C95B00]'
-      />
-       {/* Steam Wisp 3 */}
-      <path
-        d='M23 7C23 6.44772 23.4477 6 24 6H26C26.5523 6 27 6.44772 27 7V8C27 8.55228 26.5523 9 26 9H24C23.4477 9 23 8.55228 23 8V7Z'
-        className='fill-current group-hover:fill-[#C95B00] group-focus:fill-[#C95B00]'
+      <path 
+          d="M274 235c18 21-5 40-5 40s47-24 25-54-35-42 48-90C342 130 211 163 274 235M294 53s40 40-38 100c-62 49-14 77 0 109-36-33-63-61-45-88C238 134 310 115 294 53" fill="#f8981d"/><path d="M206 347s-15 8 10 11 46 3 79-3a137 137 0 0 0 21 10C242 397 147 364 206 347m-9-42s-16 12 9 15 58 4 102-5a45 45 0 0 0 16 10C233 351 132 327 197 305m175 73s11 9-12 16c-43 13-179 17-217 1-14-6 15-17 33-17-17-10-98 21-42 30C287 432 412 396 372 378M213 262s-69 16-25 22c19 3 57 2 92-1s57-8 57-8a122 122 0 0 0-17 9c-70 18-206 10-167-9S213 262 213 262m124 69c73-37 39-80 7-66 36-30 101 36-9 68v-2M220 432c69 4 174-2 176-35 0 0-5 12-57 22s-131 10-174 3C166 422 175 429 220 432" 
+          fill="#5382a1"
       />
     </svg>
   );

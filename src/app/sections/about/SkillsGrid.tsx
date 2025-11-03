@@ -13,35 +13,31 @@ export default function SkillsGrid() {
                     // --- 1. Get the component from the data ---
                     const SkillIcon = skill.icon;
 
-                    return (
-                        <div
-                            key={skill.name}
-                            // title={`Proficiency: ${skill.proficiency}`}
-                            // 2. 'group' class allows 'group-hover:' styles in the SVG to work
-                            className="flex flex-col items-center justify-center p-3 rounded-md transition-all duration-200 group hover:scale-110"
-                        >
-              
-                            {/* --- 3. Render the SkillIcon component --- */}
-                            {/* We pass a className for sizing and default color */}
-                            <SkillIcon className="h-10 w-10 mb-2 text-[var(--foreground)]" />
+                        return (
+                            <div
+                                key={skill.name}
+                                // title={`Proficiency: ${skill.proficiency}`}
+                                // make each cell a fixed height so names line up, and use 'group' for inner hover
+                                className="relative flex flex-col items-center justify-between p-3 rounded-md transition-colors duration-200 group h-28"
+                            >
 
-                            {/* --- Text Container --- */}
-                            <div className="flex flex-col items-center text-center mt-2">
-                                {/* Skill Name (Always visible, changes color on hover) */}
-                                <span 
-                                    className="text-xs text-[var(--foreground-muted)] font-sans transition-colors duration-200 group-hover:text-[var(--primary)]">
-                                    {skill.name}
-                                </span>
+                                {/* Render the SkillIcon component. Scale the icon itself on hover so layout doesn't shift. */}
+                                <SkillIcon className="h-10 w-10 mb-2 text-[var(--foreground)] transition-transform duration-200 transform-gpu origin-center will-change-transform group-hover:scale-125" />
 
-                                {/* Proficiency (Hidden by default, fades in and gains height on hover) */}
-                                <span 
-                                    className="block text-xs text-[#b3eb91] h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out group-hover:h-4 group-hover:opacity-100"
-                                >
-                                    {skill.proficiency}
-                                </span>
+                                {/* Text container pinned to the bottom so all names align horizontally */}
+                                <div className="w-full flex flex-col items-center text-center">
+                                    {/* Skill Name (Always visible, changes color on hover) */}
+                                    <span className="text-xs text-[var(--foreground-muted)] font-sans transition-colors duration-200 group-hover:text-[var(--primary)]">
+                                        {skill.name}
+                                    </span>
+
+                                    {/* Proficiency: reserved space below the name; fades in without pushing layout */}
+                                    <span className="block h-4 mt-1 text-xs text-[#16a34a] dark:text-[#b3eb91] opacity-0 pointer-events-none transition-opacity duration-300 group-hover:opacity-100">
+                                        {skill.proficiency}
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                    );
+                        );
                 })}
             </div>
         </div>

@@ -7,7 +7,10 @@ export default function Hero() {
     return (
         // This section is now full-screen on desktop (md:h-screen)
         // and auto-height on mobile
-        <section className="relative w-full h-auto md:h-screen flex items-center">
+        <section 
+            id = 'home'
+            className="relative w-full h-auto md:h-screen flex items-center"
+        >
         
             {/* 1. This is the Background Image */}
             {/* It is HIDDEN on mobile (hidden) and VISIBLE on desktop (md:block) */}

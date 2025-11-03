@@ -15,6 +15,9 @@
   --color-name-logo: #DAA520; /* Gold/Yellowish */
   --color-greeting: #20B2AA; /* LightSeaGreen/Cyan */
   --color-highlight: #32CD32; /* LimeGreen */
+  /* Navbar link colors (light theme) */
+  --nav-link: #0f172a; /* slate-900 - slightly stronger than foreground-muted */
+  --nav-link-hover: var(--primary);
 }
 
 /* Dark Mode Variables */
@@ -29,6 +32,9 @@
   --color-name-logo: #DAA520; /* Gold/Yellowish */
   --color-greeting: #20B2AA; /* LightSeaGreen/Cyan */
   --color-highlight: #32CD32; /* LimeGreen */
+  /* Navbar link colors (dark theme) */
+  --nav-link: var(--foreground);
+  --nav-link-hover: var(--color-name-logo);
 }
 
 /* Apply the variables to the body */
