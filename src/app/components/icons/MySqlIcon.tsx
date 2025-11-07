@@ -5,6 +5,7 @@ export default function MySqlIcon({ className }: { className?: string }) {
             viewBox="0 0 32 32" 
             version="1.1" 
             xmlns="http://www.w3.org/2000/svg"
+            className={className}
         >
             <title>mysql</title>
             <path 

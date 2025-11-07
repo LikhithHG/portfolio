@@ -4,6 +4,7 @@ export default function JavaIcon({ className }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       aria-label="Java" role="img"
       viewBox="0 0 512 512" fill="none"
+      className={className}
     >
       <rect
           width="512" height="512"

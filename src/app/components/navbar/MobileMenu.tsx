@@ -74,7 +74,8 @@ export default function MobileMenu() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="flex items-center gap-3">
-                                    <FiUser className="h-5 w-5" /> About
+                                    <FiUser className="h-5 w-5" /> 
+                                    About
                                 </span>
                             </Link>
                             <Link
@@ -83,7 +84,8 @@ export default function MobileMenu() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="flex items-center gap-3">
-                                    <FiBriefcase className="h-5 w-5" /> Experience
+                                    <FiBriefcase className="h-5 w-5" /> 
+                                    Experience
                                 </span>
                             </Link>
                             <Link
@@ -92,7 +94,8 @@ export default function MobileMenu() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="flex items-center gap-3">
-                                    <FiCode className="h-5 w-5" /> Projects
+                                    <FiCode className="h-5 w-5" /> 
+                                    Projects
                                 </span>
                             </Link>
                             <Link
@@ -101,7 +104,8 @@ export default function MobileMenu() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="flex items-center gap-3">
-                                    <FiImage className="h-5 w-5" /> Gallery
+                                    <FiImage className="h-5 w-5" /> 
+                                    Gallery
                                 </span>
                             </Link>
                             <Link
@@ -110,7 +114,8 @@ export default function MobileMenu() {
                                 onClick={() => setIsMenuOpen(false)}
                             >
                                 <span className="flex items-center justify-center gap-2">
-                                    <FiMail className="h-5 w-5" /> Contact
+                                    <FiMail className="h-5 w-5" /> 
+                                    Contact
                                 </span>
                             </Link>
                         </div>
