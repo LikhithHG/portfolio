@@ -22,13 +22,13 @@ export default function Navbar() {
                 </Link>
 
                 {/* --- Mobile Menu Button (for small screens) --- */}
-                <div className="md:hidden flex items-center gap-4"> {/* <-- WRAPPER DIV */}
+                <div className="lg:hidden flex items-center gap-4"> {/* <-- WRAPPER DIV */}
                     <ThemeSwitcher />
                     <MobileMenu />
                 </div>
 
                 {/* --- Desktop Menu (for medium screens and up) --- */}
-                <div className="hidden md:flex items-center space-x-6">
+                <div className="hidden lg:flex items-center space-x-6">
                     <Link href="/#about" className="text-[var(--nav-link)] hover:text-[var(--nav-link-hover)]">
                         <span className="flex items-center gap-2"> {/* Wrapper */}
                             <FiUser className="h-4 w-4" /> {/* Icon */}

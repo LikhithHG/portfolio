@@ -8,7 +8,7 @@ export default function SkillsGrid() {
             <h3 className="text-xl font-semibold font-serif mb-6 text-[var(--foreground)] text-center">
                 My Tech Stack
             </h3>
-            <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-4 gap-4">
                 {skillsData.map((skill) => {
                     // --- 1. Get the component from the data ---
                     const SkillIcon = skill.icon;

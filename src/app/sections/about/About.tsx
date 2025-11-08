@@ -10,15 +10,15 @@ export default function About() {
                     About Me
                 </h2>
 
-                <div className="flex flex-col md:flex-row items-start gap-12 lg:gap-16">
+                <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
             
                     {/* --- Left 2/3: Content with Tabs (Client Component) --- */}
-                    <div className="md:w-2/3">
+                    <div className="lg:w-2/3">
                         <AboutContentTabs />
                     </div>  
 
                     {/* --- Right 1/3: Skills Grid (Server Component) --- */}
-                    <div className="w-full md:w-1/3">
+                    <div className="w-full lg:w-1/3 mt-12 lg:mt-0">
                         <SkillsGrid />
                     </div>
 

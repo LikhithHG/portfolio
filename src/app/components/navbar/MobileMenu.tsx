@@ -33,7 +33,7 @@ export default function MobileMenu() {
     return (
         <>
             {/* --- Mobile Menu Button (Hamburger/X) --- */}
-            <div className="md:hidden">
+            <div className="lg:hidden">
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggles state
                     className="text-[var(--foreground)] p-2 rounded-md bg-[var(--selected-background)]" // <-- MODIFIED text color
@@ -59,13 +59,13 @@ export default function MobileMenu() {
                 <>
                     {/* Overlay to close menu on outside click */}
                     <div
-                        className="fixed top-16 left-0 right-0 bottom-0 bg-black/20 z-30 md:hidden"
+                        className="fixed top-16 left-0 right-0 bottom-0 bg-black/20 z-30 lg:hidden"
                         onClick={() => setIsMenuOpen(false)}
                         aria-hidden
                     />
 
                     {/* Full-width menu anchored under the nav */}
-                    <div className="md:hidden fixed top-16 left-0 right-0 bg-[var(--background)] shadow-lg rounded-b-lg border-t border-[var(--border)] z-40">
+                    <div className="lg:hidden fixed top-16 left-0 right-0 bg-[var(--background)] shadow-lg rounded-b-lg border-t border-[var(--border)] z-40">
                         <div className="flex flex-col items-start p-2 space-y-1 text-[var(--foreground)]">
                             <Link
                                 href="/#about"
