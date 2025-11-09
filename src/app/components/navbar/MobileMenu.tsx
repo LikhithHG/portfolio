@@ -1,8 +1,9 @@
 "use client"; 
 
 import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiUser, FiBriefcase, FiCode, FiImage, FiMail } from 'react-icons/fi';
+import { navLinks } from '@/lib/navLinkData';
 
 export default function MobileMenu() {
     // State to track if the mobile menu is open
@@ -36,17 +37,15 @@ export default function MobileMenu() {
             <div className="lg:hidden">
                 <button
                     onClick={() => setIsMenuOpen(!isMenuOpen)} // Toggles state
-                    className="text-[var(--foreground)] p-2 rounded-md bg-[var(--selected-background)]" // <-- MODIFIED text color
+                    className="text-[var(--foreground)] p-2 rounded-md bg-[var(--selected-background)]"
                     aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                     aria-expanded={isMenuOpen}
                 >
                     {isMenuOpen ? (
-                        // "Chevron Up" (Close)
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" />
                         </svg>
                     ) : (
-                        // "Chevron Down" (Menu)
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                         </svg>
@@ -64,60 +63,37 @@ export default function MobileMenu() {
                         aria-hidden
                     />
 
-                    {/* Full-width menu anchored under the nav */}
-                    <div className="lg:hidden fixed top-16 left-0 right-0 bg-[var(--background)] shadow-lg rounded-b-lg border-t border-[var(--border)] z-40">
-                        <div className="flex flex-col items-start p-2 space-y-1 text-[var(--foreground)]">
-                            <Link
-                                href="/#about"
-                                ref={firstLinkRef}
-                                className="w-full py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <span className="flex items-center gap-3">
-                                    <FiUser className="h-5 w-5" /> 
-                                    About
-                                </span>
-                            </Link>
-                            <Link
-                                href="/#experience"
-                                className="w-full py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <span className="flex items-center gap-3">
-                                    <FiBriefcase className="h-5 w-5" /> 
-                                    Experience
-                                </span>
-                            </Link>
-                            <Link
-                                href="/#projects"
-                                className="w-full py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <span className="flex items-center gap-3">
-                                    <FiCode className="h-5 w-5" /> 
-                                    Projects
-                                </span>
-                            </Link>
-                            <Link
-                                href="/gallery"
-                                className="w-full py-2 px-3 rounded-md hover:bg-[var(--selected-background)] hover:text-[var(--primary)]"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <span className="flex items-center gap-3">
-                                    <FiImage className="h-5 w-5" /> 
-                                    Gallery
-                                </span>
-                            </Link>
-                            <Link
-                                href="/#contact"
-                                className="mt-2 w-full text-center bg-[var(--primary)] text-white px-4 py-2 rounded-md hover:opacity-90"
-                                onClick={() => setIsMenuOpen(false)}
-                            >
-                                <span className="flex items-center justify-center gap-2">
-                                    <FiMail className="h-5 w-5" /> 
-                                    Contact
-                                </span>
-                            </Link>
+                    {/* Full-width menu container*/}
+                    <div className="lg:hidden fixed top-16 left-0 right-0 bg-[var(--background)] shadow-lg rounded-b-lg border-t border-[var(--border)] z-40 p-4">
+                        {/* 2. ADDED space-y-3 for gap between cards */}
+                        <div className="flex flex-col space-y-3">
+                            {navLinks.map((link, index) => {
+                                const Icon = link.icon;
+                                return (
+                                    <Link
+                                        key={link.text}
+                                        href={link.href}
+                                        ref={index === 0 ? firstLinkRef : null}
+                                        // 3. APPLY CARD STYLES HERE
+                                        className="
+                                            w-full p-4 rounded-lg 
+                                            bg-[var(--selected-background)] text-[var(--foreground)] 
+                                            hover:bg-[var(--border)] 
+                                            transition-colors duration-200
+                                        "
+                                        onClick={() => setIsMenuOpen(false)}
+                                    >
+                                        <span className="flex items-center justify-between w-full">
+                                            {/* 4. APPLY TEXT STYLES HERE */}
+                                            <span className="flex-1 text-left font-semibold tracking-wider uppercase">
+                                                {link.text}
+                                            </span>
+                                            {/* 5. APPLY ICON STYLES HERE */}
+                                            <Icon className="h-5 w-5 flex-shrink-0" />
+                                        </span>
+                                    </Link>
+                                );
+                            })}
                         </div>
                     </div>
                 </>

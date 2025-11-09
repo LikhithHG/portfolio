@@ -48,9 +48,13 @@ export default function Hero() {
                     {/* Apply Serif font and foreground color */}
                     <h1 className="text-3xl md:text-5xl font-semibold font-serif text-[var(--foreground)]">
                         {/* Apply Sans font to "I'm" */}
-                        <span className="text-xl md:text-3xl text-gray-600 dark:text-[var(--foreground)] md:text-gray-200">I'm </span>
+                        <span className="text-xl md:text-3xl text-gray-600 dark:text-[var(--foreground)] md:text-gray-200">
+                            I'm 
+                        </span>
                         {/* Apply script font and highlight color to first name */}
-                        <span className=" bg-gradient-to-br bg-clip-text text-transparent from-[#FFD700] to-[#20B2AA] md:tracking-wider">Likhith Murthy</span> 
+                        <span className=" bg-gradient-to-br bg-clip-text text-transparent from-[#FFD700] to-[#20B2AA] md:tracking-wider">
+                            Likhith Murthy
+                        </span> 
                     </h1>
                     {/* Subtitle */}
                     {/* Apply Serif font and muted foreground color */}

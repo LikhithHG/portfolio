@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import MobileMenu from './MobileMenu';
 import { ThemeSwitcher } from './ThemeSwitcher';
-import { FiUser, FiBriefcase, FiCode, FiImage, FiMail } from 'react-icons/fi';
+import { navLinks } from '@/lib/navLinkData';
 
 export default function Navbar() {
     return (
@@ -29,38 +29,25 @@ export default function Navbar() {
 
                 {/* --- Desktop Menu (for medium screens and up) --- */}
                 <div className="hidden lg:flex items-center space-x-6">
-                    <Link href="/#about" className="text-[var(--nav-link)] hover:text-[var(--nav-link-hover)]">
-                        <span className="flex items-center gap-2"> {/* Wrapper */}
-                            <FiUser className="h-4 w-4" /> {/* Icon */}
-                            ABOUT
-                        </span>
-                    </Link>
-                    <Link href="/#experience" className="text-[var(--nav-link)] hover:text-[var(--nav-link-hover)]">
-                        <span className="flex items-center gap-2">
-                            <FiBriefcase className="h-4 w-4" />
-                            EXPERIENCE
-                        </span>
-                    </Link>
-                    <Link href="/#projects" className="text-[var(--nav-link)] hover:text-[var(--nav-link-hover)]">
-                        <span className="flex items-center gap-2">
-                            <FiCode className="h-4 w-4" />
-                            PROJECTS
-                        </span>
-                    </Link>
-                    <Link href="/gallery" className="text-[var(--nav-link)] hover:text-[var(--nav-link-hover)]">
-                        <span className="flex items-center gap-2">
-                            <FiImage className="h-4 w-4" />
-                            GALLERY
-                        </span>
-                    </Link>
-                    <Link
-                        href="/#contact"
-                        className="bg-[var(--primary)] text-white px-4 py-2 rounded-md hover:opacity-90 flex items-center gap-2" // Added flex items-center gap-2
-                    >
-                        <FiMail className="h-4 w-4" /> {/* Icon for Contact Button */}
-                        CONTACT
-                    </Link>
+                    {/* The .map() loop now includes "CONTACT" */}
+                    {navLinks.map((link) => {
+                        const Icon = link.icon;
+                        return (
+                            <Link 
+                                key={link.text} 
+                                href={link.href} 
+                                className="text-[var(--nav-link)] hover:text-[var(--nav-link-hover)]"
+                            >
+                                <span className="flex items-center gap-2">
+                                    <Icon className="h-4 w-4" />
+                                    {link.text}
+                                </span>
+                            </Link>
+                        );
+                    })}
+
                     <ThemeSwitcher />
+
                 </div>
             </div>
         </nav>
