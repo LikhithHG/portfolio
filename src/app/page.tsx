@@ -1,13 +1,14 @@
 import About from './sections/about/About';
-import Hero from './sections/hero/Hero'; // 1. Import your new section
+import Hero from './sections/hero/Hero';
+import Experience from './sections/experience/Experience';
 
 export default function Home() {
   return (
     <main>
-      <Hero /> {/* 2. Add the component here */}
+      <Hero />
       <About />
-      
-      {/* We will add the 'About' section below this next */}
+      <Experience />
+
     </main>
   );
 }

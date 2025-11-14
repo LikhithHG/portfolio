@@ -18,7 +18,7 @@ export default function Hero() {
                 src="/images/hero-background.jpg" 
                 alt="Background"
                 fill
-                className="object-cover -z-10 hidden md:block" // Hides on mobile
+                className="object-cover object-right -z-10 hidden md:block" // Hides on mobile
                 priority // Helps load this large image faster
             />
 
@@ -49,7 +49,7 @@ export default function Hero() {
                     <h1 className="text-3xl md:text-5xl font-semibold font-serif text-[var(--foreground)]">
                         {/* Apply Sans font to "I'm" */}
                         <span className="text-xl md:text-3xl text-gray-600 dark:text-[var(--foreground)] md:text-gray-200">
-                            I'm 
+                            I'm{' '}
                         </span>
                         {/* Apply script font and highlight color to first name */}
                         <span className=" bg-gradient-to-br bg-clip-text text-transparent from-[#FFD700] to-[#20B2AA] md:tracking-wider">
