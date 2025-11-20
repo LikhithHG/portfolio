@@ -1,24 +1,24 @@
+// src/app/sections/experience/Experience.tsx
+// NO 'use client' here!
+
 import { experienceData } from '@/lib/experienceData';
-import ExperienceCard from './ExperienceCard';
+import ExperienceClient from './ExperienceClient';
 
 export default function Experience() {
     return (
         <section id="experience" className="w-full py-16 md:py-24 px-4 bg-[var(--background)]">
             <div className="container mx-auto max-w-6xl">
-                {/* Section Title */}
-                <div className="text-center mb-12 md:mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold font-serif text-transparent bg-gradient-to-r from-[#FFD700] to-[#20B2AA] bg-clip-text mb-4">
+            
+                {/* Static Title (Rendered on Server) */}
+                <div className="text-center mb-8 md:mb-12">
+                    <h2 className="text-3xl md:text-4xl font-bold font-serif text-center mb-16 text-[var(--foreground)]">
                         My Experience
                     </h2>
-                    <div className="w-16 h-1 bg-gradient-to-r from-[#FFD700] to-[#20B2AA] mx-auto"></div>
                 </div>
 
-                {/* Experience Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {experienceData.map((experience) => (
-                        <ExperienceCard key={experience.id} experience={experience} />
-                    ))}
-                </div>
+                {/* Interactive Part (Client Component) */}
+                <ExperienceClient data={experienceData} />
+
             </div>
         </section>
     );

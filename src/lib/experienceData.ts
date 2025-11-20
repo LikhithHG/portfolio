@@ -1,3 +1,17 @@
+// 1. Define and Export the Type
+export type Experience = {
+    id: number;
+    title: string;
+    company: string;
+    logo: string;
+    companyLogo: string;
+    location: string;
+    startDate: string;
+    endDate: string;
+    description: string;
+    tags: string[];
+};
+
 export const experienceData = [
     {
         id: 1,
