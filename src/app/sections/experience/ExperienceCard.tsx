@@ -112,10 +112,18 @@ export default function ExperienceCard({ experience, compact, expanded, onClick,
             </span>
         </div>
 
-        {/* --- Description --- */}
+        {/* --- Description ---
         <div className="text-[var(--foreground-muted)] leading-relaxed font-serif mb-8 text-base md:text-lg">
            <p>{experience.description}</p>
-        </div>
+        </div> */}
+        {/* Description - Full Bullet List */}
+        <ul className="list-disc pl-5 space-y-2 text-md text-[var(--foreground-muted)] mb-6 font-serif leading-relaxed">
+            {experience.description.map((point, index) => (
+                <li key={index}>
+                    {point}
+                </li>
+            ))}
+        </ul>
 
         {/* --- Tags --- */}
         <div className="flex flex-wrap gap-2">

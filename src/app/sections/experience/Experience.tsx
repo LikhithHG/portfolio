@@ -1,12 +1,12 @@
-// src/app/sections/experience/Experience.tsx
-// NO 'use client' here!
-
 import { experienceData } from '@/lib/experienceData';
 import ExperienceClient from './ExperienceClient';
 
 export default function Experience() {
     return (
-        <section id="experience" className="w-full py-16 md:py-24 px-4 bg-[var(--background)]">
+        <section 
+            id="experience" 
+            className="w-full py-16 md:py-24 px-4 bg-[var(--background)]"
+        >
             <div className="container mx-auto max-w-6xl">
             
                 {/* Static Title (Rendered on Server) */}

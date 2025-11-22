@@ -44,7 +44,7 @@ export default function ExperienceClient({ data }: { data: Experience[] }) {
                 <ExperienceCard
                   experience={data.find((e) => e.id === activeId)!}
                   expanded // Render full details
-                  onClose={() => setActiveId(null)}
+                  onClose = {() => setActiveId(null)}
                 />
               </div>
             </div>
