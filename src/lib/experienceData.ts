@@ -9,6 +9,7 @@ export type Experience = {
     startDate: string;
     endDate: string;
     description: string[];
+    summary: string;
     tags: string[];
 };
 
@@ -30,6 +31,7 @@ export const experienceData = [
             "Participate in code reviews, design discussions, and contribute to continuous integration and delivery pipelines",
             "Gain exposure to Oracle’s internal tools, software lifecycle processes, and global engineering best practices",
         ],
+        summary: "Architecting scalable solutions while streamlining continuous integration and global deployment workflows",
         tags: [
             "Oracle Cloud Infrastructure", 
             "OCI IoT", "Devops", "Careaware", 
@@ -62,6 +64,7 @@ export const experienceData = [
             "Implemented CI/CD pipelines using GitHub Actions, automating testing and deployment processes to streamline releases",
             "Enhanced user experience by redesigning navigation flows and optimizing load times, resulting in a 15% increase in user engagement",
         ],
+        summary: "Enhanced application performance and stability by resolving technical debt and optimizing React component architecture",
         tags: [
             "Volunteering", 
             "ReactJs", 
@@ -89,6 +92,7 @@ export const experienceData = [
             "Assisted in developing course materials and lab exercises that enhanced students' hands-on experience with network programming concepts",
             "Provided feedback on student projects, emphasizing code efficiency, readability, and adherence to software development principles",
         ],
+        summary: "Increased student comprehension by 30% through targeted mentorship in network protocols and software design patterns",
         tags: [
             "Education", 
             "Mentoring", 
@@ -121,6 +125,7 @@ export const experienceData = [
             "Authored 150+ SOPs, deployment playbooks, and troubleshooting guides, cutting new engineer onboarding time by 40% and improving team knowledge sharing",
             "Recognized with the NOTT (Night Owl Troubleshooter Team) Award – Q4 2022 for optimizing critical monitoring dashboards and resolving high-severity incidents under pressure",
         ],
+        summary: "Bridging network operations and software development by building React dashboards and Python automation tools for enterprise infrastructure",
         tags: [
             "Oracle", 
             "Network", 
@@ -149,6 +154,7 @@ export const experienceData = [
             "Monitored system performance and generated reports using Nagios and SolarWinds, identifying and resolving bottlenecks that improved system uptime by 15%",
             "Assisted in creating documentation for system configurations, backup procedures, and disaster recovery plans, enhancing team knowledge sharing and compliance",
         ],
+        summary: "Streamlined critical system backups and virtual machine provisioning for scalable infrastructure",
         tags: [
             "Data Analytics", 
             "Healthcare", 
